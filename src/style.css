@@ -36,6 +36,9 @@ p {
   color: black;
   font-size: 24px;
 }
+ul {
+  list-style: none;
+}
 .wireframe {
   text-align: center;
   border: 5px solid #ee6666;
@@ -127,4 +130,13 @@ p {
 .col {
   font-size: 24px;
   color: gray;
+}
+
+#celsius {
+  text-align: right;
+  color: #e20000;
+  font-family: "Chakra Petch", sans-serif;
+  position: relative;
+  bottom: 308px;
+  left: 449px;
 }

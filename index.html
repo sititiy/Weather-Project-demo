@@ -11,6 +11,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script
       src="https://kit.fontawesome.com/9a966f7427.js"
       crossorigin="anonymous"
@@ -26,14 +27,19 @@
   <body>
     <div class="container">
       <div class="wireframe">
-        <span><button class="current-city">Current City</button></span>
         <span
-          ><form>
+          ><button class="current-city" id="current-location-button">
+            Current City
+          </button></span
+        >
+        <span
+          ><form class="search-form" id="search-form">
             <input
               type="text"
               placeholder="Enter your city"
               autofocus="off"
               autocomplete="off"
+              id="search-input"
             />
           </form>
         </span>
@@ -41,20 +47,19 @@
         <br />
         <br />
         <br />
-        <h1 class="city-name">Tehran</h1>
-        <h2>Wed | Night</h2>
+        <h1 class="city-name" id="city-name">Tehran</h1>
+        <h2 id="date"></h2>
 
         <i class="fa-solid fa-cloud-sun main"></i>
 
-        <h1 class="degree">9°C</h1>
-        <p class="situation">
-          Clear with<br />
-          periodic clouds
-        </p>
-        <div class="extra-info">Precipitation: 1%</div>
-        <div class="extra-info">Humidity: 40%</div>
-        <div class="extra-info">Wind: 0 km/h</div>
+        <h1 class="degree" id="degree"></h1>
+        <span class="degree" id="celsius">°C</span>
+        <p class="situation" id="description"></p>
+        <ul>
+          <li class="extra-info">Humidity: <span id="humidity"></span>%</li>
 
+          <li class="extra-info">Wind: <span id="wind"></span>km/h</li>
+        </ul>
         <hr />
         <div class="row">
           <div class="col">
