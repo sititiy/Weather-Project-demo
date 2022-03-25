@@ -39,6 +39,17 @@ p {
 ul {
   list-style: none;
 }
+a {
+  text-decoration: none;
+  color: #f9cccc;
+}
+footer {
+  font-size: 10px;
+}
+.github-link:hover {
+  text-decoration: underline;
+  color: #f9cccc;
+}
 .wireframe {
   text-align: center;
   border: 5px solid #ee6666;
