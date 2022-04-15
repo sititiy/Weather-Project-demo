@@ -39,8 +39,6 @@ function displayWeatherCondition(response) {
 
   let iconElement = document.querySelector("#main-icon");
   iconElement.setAttribute("class", "fa-solid fa-cloud main");
-
-  //iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchingCity(city) {
@@ -73,3 +71,31 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchingCity("New York");
+
+//////
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+              <div class="col-2">
+                <span class="weather-forecast-day">${day}</span>
+                <br />
+                <div class="icon">
+                  <i class="fa-solid fa-cloud-sun"></i>
+                </div>
+                <p>
+                  <span class="weather-forecast-temp-max">12°</span>
+                  <span class="weather-forecast-temp-min">4° </span>
+                </p>
+              </div>
+            `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  displayForecast();
