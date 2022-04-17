@@ -115,7 +115,7 @@ function getCurrentLocation(event) {
 
 let searchCity = document.querySelector("#search-form");
 searchCity.addEventListener("submit", submitCity);
-//doesnt work while clicking but works with enter, why ??
+searchCity.addEventListener("click", submitCity);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
