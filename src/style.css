@@ -159,3 +159,9 @@ footer {
 .weather-forecast-temp-min {
   opacity: 0.4;
 }
+
+#icon {
+  width: 150px;
+  background-color: #e2000038;
+  border-radius: 56px;
+}

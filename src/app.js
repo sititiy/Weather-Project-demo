@@ -47,9 +47,15 @@ function displayForecast(response) {
                   forecastDay.dt
                 )}</span>
                 <br />
-                <div class="icon">
-                  <i class="fa-solid fa-cloud-sun"></i>
-                </div>
+                
+                <img
+                src="http://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png"
+                 alt=""
+                 width="46"
+                 class = "icon"
+        />
                 <p>
                   <span class="weather-forecast-temp-max">${Math.round(
                     forecastDay.temp.max
@@ -85,8 +91,12 @@ function displayWeatherCondition(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
 
-  let iconElement = document.querySelector("#main-icon");
-  iconElement.setAttribute("class", "fa-solid fa-cloud main");
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 
   getForecast(response.data.coord);
 }
